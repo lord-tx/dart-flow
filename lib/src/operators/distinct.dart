@@ -16,9 +16,8 @@ class Distinct<K, T> {
         equivalenceMethod = equivalenceMethod ?? ((K? oldValue, K? newValue) => oldValue == newValue);
 
   Flow<T> call() {
+    dynamic previousKey;
     return flow((collector) async {
-      dynamic previousKey;
-
       upstreamFlow.collectSafely((value) async {
         final key = keySelector(value);
 
