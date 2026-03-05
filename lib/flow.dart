@@ -5,3 +5,4 @@ export 'src/builders.dart';
 export 'src/operators/cache.dart';
 export 'src/exceptions/flow_exception.dart' hide ErrorX;
 export 'src/retries.dart';
+export 'src/collectors/flow_collector.dart';
